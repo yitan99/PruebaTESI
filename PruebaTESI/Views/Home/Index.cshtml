@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PruebaTESI.Entities.DTO.PAZIENTI_DTO>
+@{
+    ViewData["Title"] = "Listado de pacientes";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Listado de pacientes</h1>
+    <p>&nbsp;</p>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <td>APELLIDO</td>
+                <td>NOMBRE</td>
+                <td>CODIGO DE PACIENTE</td>
+                <td>FECHA DE CITA</td>
+                <td>EDAD</td>
+            </tr>
+        </thead>
+    @foreach (var item in Model)
+    {
+            <tr>
+                <td>@item.COGNOME</td>
+                <td>@item.NOME</td>
+                <td>@item.ID_PAZIENTE</td>
+                <td>@item.DATA_ORA_PRELIEVO</td>
+                <td>@item.edad</td>
+            </tr>
+    }
+    </table>
+</div>
